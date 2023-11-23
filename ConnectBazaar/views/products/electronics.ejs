@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 class="text-center">PRODUCTS</h1>
+    <div class="row">
+        <% for(let item of products){ %>
+          <%  if(item.category==="Electronics"){ %>
+            <div class="col-lg-4">
+        <div class="card mx-auto" style="width: 18rem;">
+            
+                
+            <img class="card-img-top" src="<%=item.img%>" alt="Card image cap">
+            <div class="card-body">
+              <h3 class="card-title"><%=item.name%></h3>
+              <h5 class="card-title">&#8377; <%=item.price%>/-</h5>
+              <p class="card-text"><%=item.desc%></p>
+                <!-- <a href="/products/<%=item._id%>" class="btn btn-primary">View Product</a> -->
+                <!-- <form class="d-inline-block"action="/products/<%=item._id%>?_method=DELETE" method="POST">
+                    <button class="btn btn-sm btn-danger ">Delete</button>
+                </form> -->
+            </div>
+        </div>
+           
+          </div>
+          <% } %>
+          <% } %>
+        
+    </div>
+    
+        
+    
+</body>
+</html>
